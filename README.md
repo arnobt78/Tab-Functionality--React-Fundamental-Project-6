@@ -1,4 +1,4 @@
-# Tabs - React Fundamental Project 6
+# Tabs Page Display - React, Vite, JavaScript, Custom CSS Fundamental Project 6
 
 <img width="1159" alt="Project Screenshot" src="https://github.com/user-attachments/assets/d5c35827-cf2c-4d03-8504-65ad6e5f6f58" />
 
@@ -76,7 +76,8 @@ Tabs--React-Fundamental-Project-6/
 ├── README.md
 └── ...
 ```
-*Note: The actual structure may vary if you have additional files or folders.*
+
+_Note: The actual structure may vary if you have additional files or folders._
 
 ---
 
@@ -141,13 +142,17 @@ npm start
 ### 6. **UUID for Keys**
 
 - Install with:
+
   ```sh
   npm install uuid
   ```
+
 - Import and use:
+
   ```js
   import { v4 as uuidv4 } from "uuid";
   ```
+
 - Use `uuidv4()` to generate unique keys for list items.
 
 ---
@@ -166,6 +171,7 @@ npm start
 
 - The app relies on an external API for job data.
 - Example structure of a fetched job object:
+
   ```json
   {
     "company": "Google",
@@ -178,6 +184,7 @@ npm start
     ]
   }
   ```
+
 - Data is fetched once on component mount and stored in state.
 
 ---
@@ -189,6 +196,7 @@ npm start
 - **loading**: Boolean indicating loading state.
 
 Example code:
+
 ```js
 const [jobs, setJobs] = useState([]);
 const [currentItem, setCurrentItem] = useState(0);
@@ -202,9 +210,9 @@ const [loading, setLoading] = useState(true);
 ```jsx
 // App.jsx
 useEffect(() => {
-  fetch('https://course-api.com/react-tabs-project')
-    .then(res => res.json())
-    .then(data => {
+  fetch("https://course-api.com/react-tabs-project")
+    .then((res) => res.json())
+    .then((data) => {
       setJobs(data);
       setLoading(false);
     });
@@ -213,7 +221,11 @@ useEffect(() => {
 // Render logic:
 return (
   <main>
-    <BtnContainer jobs={jobs} currentItem={currentItem} setCurrentItem={setCurrentItem} />
+    <BtnContainer
+      jobs={jobs}
+      currentItem={currentItem}
+      setCurrentItem={setCurrentItem}
+    />
     <JobInfo {...jobs[currentItem]} />
   </main>
 );
