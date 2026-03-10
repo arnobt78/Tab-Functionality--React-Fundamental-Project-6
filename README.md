@@ -9,7 +9,7 @@ A React application demonstrating **tab functionality**: it displays job informa
 
 - **Live Demo:** [https://tab-functionality.vercel.app/](https://tab-functionality.vercel.app/)
 
----
+<img width="1531" height="545" alt="Screenshot 2026-03-10 at 16 43 04" src="https://github.com/user-attachments/assets/ebae5f91-a3b3-43c3-9fbf-6649234105b6" />
 
 ## Table of Contents
 
